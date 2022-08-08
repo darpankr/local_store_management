@@ -1,0 +1,139 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style type="text/css">
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+    background-color: #eee;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300
+}
+
+.height {
+    height: 20vh
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.search input {
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid blue
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 16px
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue
+}
+
+
+.text-gray {
+    color: #aaa
+}
+
+img {
+    height: 170px;
+    width: 140px
+}
+</style>
+
+		<div class="container">
+		    <div class="row height d-flex justify-content-center align-items-center">
+		        <div class="col-md-10">
+		        	<form action="{% url 'Home' %}">
+		            <div class="search"> <i class="fa fa-search"></i> <input name = "search" type="text" class="form-control" placeholder="Search SmartPhone"> <button class="btn btn-primary" type="submit">Search</button> </div>
+		        </form>
+		        </div>
+		    </div>
+
+
+
+		    <div class="container">
+			    <div class="row text-center text-white mb-5">
+			        <div class="col-lg-7 mx-auto">
+			            <h1 class="display-4">Product List</h1>
+			        </div>
+			    </div>
+			    <div class="row">
+			        <div class="col-lg-10 mx-auto">
+			            <!-- List group-->
+			            <ul class="list-group shadow">
+			                <!-- list group item-->
+			                {% for phone in phone %}
+			                <li class="list-group-item">
+			                    <!-- Custom content-->
+			                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+			                        <div class="media-body order-2 order-lg-1">
+			                            <h5 class="mt-0 font-weight-bold mb-2">{{phone.brand}} {{phone.model}} ({{phone.color}} | {{phone.ram}} | {{phone.rom}})</h5>
+			                            <hr style="height:2px;border-width:0;color:black;background-color:black">
+			                            <p class="font-italic text-muted mb-0 small">Shop Name : {{phone.owner.shop}}</p>
+			                            {% if phone.status == 'available' %}
+			                            <h6 class="font-weight-bold my-2 text-success">Available</h6>
+			                            {% else %}
+			                            <h6 class="font-weight-bold my-2 text-danger">Out of stock</h6>
+			                            {% endif %}
+			                            
+			                            <div class="d-flex align-items-center justify-content-between mt-1">
+			                                <h6 class="font-weight-bold my-2">₹{{phone.price}}</h6>
+			                                <ul class="list-inline small">
+			                                	
+
+			                                    <li class="list-inline-item m-0">*<i class="fa fa-star text-success"></i></li>
+			                                    <li class="list-inline-item m-0">*<i class="fa fa-star text-success"></i></li>
+			                                    <li class="list-inline-item m-0">*<i class="fa fa-star text-success"></i></li>
+			                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+			                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+			                                </ul>
+			                            </div>
+			                            <!-- <button type="button" class="btn btn-info">Info</button> -->
+			                            <button type="button" class = "btn btn-outline-info">
+										    <a href="{% url 'Phoneshopdetails' phone.id %}">View</a>
+										</button>
+										<!-- <form method="link" action="phoneshopdetails/<int:pk>/">
+											<input type="button" value="{{phone.id}}">
+										</form> -->
+			                        </div><img src="https://i.imgur.com/KFojDGa.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+
+			                    </div> <!-- End -->
+
+			                </li> <!-- End -->
+			                <br>
+			                {% endfor %}
+			                
+			            </ul> <!-- End -->
+			        </div>
+			    </div>
+			</div>
+
+
+		<div class="container py-5">
+		  
+		</div>
+
+
+
+{% endblock content %}
+
+

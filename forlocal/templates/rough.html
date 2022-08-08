@@ -1,0 +1,546 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+    background-color: #eee;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100
+    height: 100%;
+}
+
+.height {
+    height: 10vh
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+}
+
+.search input {
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4
+}
+
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid blue
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 16px
+}
+
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue
+}
+
+
+.text-gray {
+    color: #aaa
+}
+
+img {
+    height: 170px;
+    width: 140px
+}
+</style>
+
+        <div class="container">
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-10">
+                    <form action="{% url 'Home' %}">
+                    <div class="search"> <i class="fa fa-search"></i> <input name = "search" type="text" class="form-control" placeholder="Search SmartPhone and laptops"> <button class="btn btn-primary" type="submit">Search</button> </div>
+                </form>
+                </div>
+            </div>
+            <div class="container">
+                
+                <div class="row text-right text-white mb-5">
+                    <div class="col-lg-3 mx-auto">
+                        <h1 class="display-4">Accessories</h1>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2">Acer 7 (win10 | 8 GB | 512 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://rukminim2.flixcart.com/image/312/312/kp1imq80/computer/u/b/z/na-gaming-laptop-acer-original-imag3d63hk3h8nm2.jpeg?q=70">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹50000</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Lenovo i3 (win10 | 8 GB | 256 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://rukminim2.flixcart.com/image/312/312/keaaavk0/computer/x/m/y/lenovo-na-laptop-original-imafuzt8r5jqppfn.jpeg?q=70" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-danger">Unvailable</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹37500</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Asus 15 (win11 | 8 GB | 512 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://rukminim2.flixcart.com/image/312/312/ksyz8280/computer/f/9/9/x515ea-ej302ts-thin-and-light-laptop-asus-original-imag6fc9kxzc6rrh.jpeg?q=70" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹39990</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Dell i3 (win11 | 8 GB | 1 tB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://rukminim2.flixcart.com/image/312/312/kt8zb0w0/computer/n/m/v/inspiron-3511-thin-and-light-laptop-dell-original-imag6n5kbmfcgxk6.jpeg?q=70" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹47990</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+        
+                <div class="row">
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Realme X2 (White | 6 GB | 64 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://i.imgur.com/KFojDGa.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹18000</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Oppo Reno5 (Blue | 8 GB | 128 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://i.imgur.com/KFojDGa.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹22000</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Samsung G3 (Black | 8 GB | 64 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://i.imgur.com/KFojDGa.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-danger">Unvailable</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹16000</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto">
+                        <div class="grid-wrapper">
+                        <!-- List group-->
+                        <ul class="list-group shadow">
+                            <!-- list group item-->
+                            
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                    <div class="row">
+                                    <div>
+                                        <h5 class="mt-0 font-weight-bold mb-2"> Realme 7 (pearl | 6 GB | 32 GB)</h5>
+                                        <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    </div>
+                                    <div>
+                                    <img src="https://i.imgur.com/KFojDGa.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                        <h6 class="font-weight-bold my-2 text-success">Available</h6>
+                                        
+                                        <!-- <h6 class="font-weight-bold my-2 text-danger">Unavailable</h6> -->
+                                        
+                                        
+                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                            <h6 class="font-weight-bold my-2">₹12000</h6>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                        <!-- <button type="button" class="btn btn-info">Info</button> -->
+                                        <button type="button" class = "btn btn-outline-info">
+                                            <a href="">View</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                </div> <!-- End -->
+
+                            </li> <!-- End -->
+                            <br>
+                           
+                            
+                        </ul> <!-- End -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="row">
+                <div class="col-md">
+                    <div class="card card-body">
+                        <h5>PHONE</h5>
+                    </div>
+                    <div class="card card-body">
+                        <table class="table table-sm">
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Ram</th>
+                        <th>Rom</th>
+                        <th>Shop</th>
+                        <th>Status</th>
+                    </tr>
+                    {% for phone in phone %}
+
+                    <tr>
+                        <td>{{phone.brand}}</td>
+                        <td>{{phone.model}}</td>
+                        <td>{{phone.color}}</td>
+                        <td>{{phone.ram}}</td>
+                        <td>{{phone.rom}}</td>
+                        <td>{{phone.owner.shop}}</td>
+                        <td class = "text-success">{{phone.status}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                    </div>
+                </div>
+                
+            </div> -->
+        </div>
+
+
+        <div class="container py-5">
+
+
+        <!--    <style type="text/css">
+    body {
+          background: #00b09b;
+          background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
+          background: linear-gradient(to right, #00b09b, #96c93d);
+          min-height: 100vh;
+        }
+
+        .text-gray {
+          color: #aaa;
+        }
+</style> -->
+
+          <!-- For demo purpose -->
+          
+        </div>
+
+
+
+{% endblock content %}
+
+

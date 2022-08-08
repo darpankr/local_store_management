@@ -1,0 +1,152 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <title>PointTwo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style type="text/css">
+    /* Code that does the work */
+
+    body,
+html,
+main
+{
+  height: 100%;
+  width: 100%;
+  margin: auto 0;
+  font-family: 'Raleway','Microsoft JhengHei';
+}
+
+.fixed-bg {
+  min-height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover !important; 
+  -moz-background-size: cover !important; 
+  -o-background-size: cover; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*padding: 0 20px;*/
+  line-height: 1.5;    
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
+  opacity: 0.95;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.main-text {
+  font-size: 5.5em;
+  line-height:0px;
+}
+.sub-text{
+  color:#fff;
+  line-height:0px;
+  text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
+}
+.text-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  margin: 0;
+  max-width: 500px;
+}
+.fixed-bg h2 {
+  font-size: 4em;
+}
+.fixed-bg p {
+  text-align: center;
+  max-width: 100%;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.bg-2 {
+  background-image: url("https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+
+    <header>
+    <!-- {%  include 'nav.html' %} -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'Home' %}">PointTwo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class = "navbar-nav">
+          {% if request.user.is_authenticated %}
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "{% url 'Home' %}">Home</a>
+          </li>
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "{% url 'Dashboard' %}">Dashboard</a>
+          </li>
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "{% url 'Profile' %}">Profile</a>
+          </li>
+          <li class = "nav-item active">
+            <a class = "nav-link" href = "{% url 'Shopprofile' %}">Shop</a>
+          </li>
+          {% endif %}
+      </div>
+      {% if request.user.is_authenticated %}
+      <span class="hello-msg">Hi {{request.user}}</span>
+      <br>
+      <span><a href = "{% url 'Logout' %}">Logout</a></span>
+      {% else %}
+      <span><a href = "{% url 'Login' %}">Login</a></span>
+      {% endif %}
+    </nav>
+  </header>
+
+  <div class="fixed-bg bg-2">
+    <!-- <h1>The capital is Tórshavn.</h1> -->
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+
+  </div>
+  </div>
+
+  <footer class="text-muted">
+    <div class="container text-center">
+      <p>This is a footer {% now "Y" %}</p>
+      </div>
+  </footer>
+</main>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+</code></pre>
